@@ -1,0 +1,37 @@
+{
+  "name": "gulp-codename",
+  "version": "0.0.1",
+  "description": "A gulp plugin to include codename for your application based on SEMVER version.",
+  "license": "MIT",
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "codename",
+    "scriptwerx"
+  ],
+  "homepage": "",
+  "bugs": "/issues",
+  "author": {
+    "name": "Paul Massey",
+    "email": "paul.massey@scriptwerx.io",
+    "url": "http://www.scriptwerx.io"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "gulp-util": "~3.0.3",
+    "gulp-json-editor": "~2.2.1",
+    "through2": "~0.6.3"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "mocha": "*",
+    "should": "*"
+  }
+}
