@@ -6,7 +6,7 @@
 
 Utility to include a codename for your application based on version (up-to v10.X.X-X).
 
-This works great alongside version bump utility: [gulp-bumpx][] for keeping your version numbers and names up-to-date with each build.
+This works great alongside version bump utility: [gulp-bump][] for keeping your version numbers and names up-to-date with each build.
 
 Included codenames and patchNames created with the help of the excellent [codenamegenerator.com][] website.
 
