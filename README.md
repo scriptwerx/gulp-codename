@@ -34,7 +34,7 @@ The project follows the [SemVer][] guidelines for version numbers; specifically 
 ## The "codename" task
 
 ### Overview
-In your project's gulpfile.js, add a section named `codename`.
+In your project's gulpfile.js, add a task named `codename`.
 
 ```javascript
 gulp.task('codename', function() {
@@ -80,7 +80,7 @@ Once **codename** has been used (with patch names enabled); the *manifest.json* 
 
 options.* | Type | Default | Description
 ---|:---:|:---:|---
-patch|`Boolean`|`false`|Generate a name for the *patch* version as well as the main codename.
+patchname|`Boolean`|`false`|Generate a name for the *patch* version as well as the main codename.
 codenames|`File`|`undefined`|Use a custom JSON file for codenames.
 
 #### Default Options
@@ -142,6 +142,20 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 ## Changelog
 
 Changes, bug fixes and enhancements made to gulp-codename.
+
+### gulp-codename v0.1.0
+
+**"Bronze Marklar"**
+
+* Release promoted to v0.1.0.
+* **BREAKING CHANGE (if using own JSON file):** Renamed "codeNames" to "codenames" within codenames.json.
+* **BREAKING CHANGE (if using own JSON file):** Renamed "patchNames" to "patchnames" within codenames.json.
+* Code cleanup.
+* Code commented.
+* Included additional error checking.
+* Updated gulp log during codename generation for readability.
+* Removed unnecessary patch name "0". 
+* README.md updates/fixes.
 
 ### gulp-codename v0.0.7
 
