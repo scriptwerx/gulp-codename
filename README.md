@@ -1,4 +1,6 @@
-# [gulp-codename](id:mainTitle) [![GitHub version][badge-github-version-image] ][badge-npm-url] ![Progress](http://progressed.io/bar/50)
+# [gulp-codename](id:mainTitle)
+
+[![Build Status](https://travis-ci.org/scriptwerx/gulp-codename.svg?branch=master)](https://travis-ci.org/scriptwerx/gulp-codename) [![GitHub version][badge-github-version-image] ][badge-npm-url] ![Progress](http://progressed.io/bar/50)
 
 [![NPM][badge-npm-image]][badge-npm-url]
 
