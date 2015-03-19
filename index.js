@@ -26,8 +26,6 @@ module.exports = function(options) {
 
   return through.obj(function(file, encoding, callback) {
 
-    console.log('OINK:', options.codenames);
-
     if (file.isNull()) {
       return callback(null, file);
     }
