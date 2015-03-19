@@ -95,7 +95,7 @@ gulp.task('codename', function() {
 ```
 
 #### Custom Options
-Running the task in this way, the `codename` field of each traget file will be changed to the correct codename but patch name will not be included.
+Running the task in this way, the `codename` field of each source file will be changed to the correct codename but patch name will not be included.
 
 The names contained within the user-supplied *myCodenames.json* file will be used.
 
@@ -130,7 +130,14 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 Changes, bug fixes and enhancements made to gulp-codename.
 
-### gulp-codename v0.0.2
+### gulp-codename v0.0.3 (Deprecated)
+
+**"Perseus Amber" (Pangolin)**
+
+* Fixed problem with loading the codenames.json file.
+
+
+### gulp-codename v0.0.2 (Deprecated)
 
 **"Perseus Amber" (Ithomiid)**
 

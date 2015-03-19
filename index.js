@@ -18,13 +18,15 @@ module.exports = function(options) {
   }, options);
 
   if (options.codenames) {
-    options.codenames = process.cwd() + path.sep + options.codenames;
+    options.codenames = path.resolve(process.cwd() + path.sep + options.codenames);
   }
   else {
-    options.codenames = 'codenames.json';
+    options.codenames = path.resolve(__dirname + path.sep + 'codenames.json');
   }
 
   return through.obj(function(file, encoding, callback) {
+
+    console.log('OINK:', options.codenames);
 
     if (file.isNull()) {
       return callback(null, file);
