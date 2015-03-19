@@ -80,7 +80,7 @@ Once **codename** has been used (with patchNames enabled); the *manifest.json* f
 
 options.* | Type | Default | Description
 ---|:---:|:---:|---
-patchname|`Boolean`|`false`|Generate a name for the *patch* version as well as the main codename.
+patchname|`Boolean`|`true`|Generate a name for the *patch* version as well as the main codename.
 codenames|`File`|`undefined`|Use a custom JSON file for codenames.
 
 #### Default Options
