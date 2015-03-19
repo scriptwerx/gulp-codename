@@ -8,7 +8,7 @@ Utility to include a codename for your application based on version (up-to v10.X
 
 This works great alongside version bump utility: [gulp-bump][] for keeping your version numbers and names up-to-date with each build.
 
-Included codenames and patchNames created with the help of the excellent [codenamegenerator.com][] website.
+Included codenames and patch names created with the help of the excellent [codenamegenerator.com][] website.
 
 ## Getting started
 
@@ -29,7 +29,7 @@ var codename = require('gulp-codename');
 
 The project follows the [SemVer][] guidelines for version numbers; specifically following: `1.2.3-1` being `MAJOR.MINOR.PATCH-BUILD`.
 
-**N.B. The supplied codenames and patchNames only include suport for single-digit numbers used for minor and patch of the *version* field (and major up to 10) - you must supply your own custom codenames and patchNames if you can't handle this restriction (but that's a lot of names)!**
+**N.B. The supplied codenames and patch names only include support for single-digit numbers used for minor and patch of the *version* field (and major up to 10) - you must supply your own custom codenames and patch names if you can't handle this restriction (but that's a lot of names)!**
 
 ## The "codename" task
 
@@ -46,7 +46,7 @@ gulp.task('codename', function() {
 
 **codename** allows to set the codename and patch name based on the version number of the configuration file (package.json) in your project. Only JSON files are supported, and each file **must** have a `version` field compliant to [SemVer][] guidelines; specifically following: `1.2.3-1` being `MAJOR.MINOR.PATCH-BUILD`.
 
-**Remember: The supplied codenames and patchNames only include suport for single-digit numbers used for minor and patch of the *version* field (and major up to 10) - you must supply your own custom codenames and patchNames if you can't handle this restriction (but that's a lot of names)!**
+**Remember: The supplied codenames and patch names only include support for single-digit numbers used for minor and patch of the *version* field (and major up to 10) - you must supply your own custom codenames and patch names if you can't handle this restriction (but that's a lot of names)!**
 
 ### Example JSON
 
@@ -59,19 +59,19 @@ An example of a *manifest.json* file is below:
 	"name": "My Test Application",
 	"version": "1.3.2-16",
 	"codename": "",
-	"patchName": "",
+	"patchname": "",
 	"description": "A test application for me."
 }
 ```
 
-Once **codename** has been used (with patchNames enabled); the *manifest.json* file would be updated automatically as follows:
+Once **codename** has been used (with patch names enabled); the *manifest.json* file would be updated automatically as follows:
 
 ```json
 {
 	"name": "My Test Application",
 	"version": "1.3.2-16",
 	"codename": "Honiara Nimitz",
-	"patchName": "Ithomiid",
+	"patchname": "Ithomiid",
 	"description": "A test application for me."
 }
 ```
@@ -80,11 +80,11 @@ Once **codename** has been used (with patchNames enabled); the *manifest.json* f
 
 options.* | Type | Default | Description
 ---|:---:|:---:|---
-patchname|`Boolean`|`true`|Generate a name for the *patch* version as well as the main codename.
+patch|`Boolean`|`false`|Generate a name for the *patch* version as well as the main codename.
 codenames|`File`|`undefined`|Use a custom JSON file for codenames.
 
 #### Default Options
-Running the task in this way, the `codename` and `patchName` fields of each source file will be automatically changed to the correct codename and patchName for the build release.
+Running the task in this way, the `codename` and `patchname` fields of each source file will be automatically changed to the correct codename and patch name for the build release.
 
 ```javascript
 gulp.task('codename', function() {
@@ -143,6 +143,13 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 Changes, bug fixes and enhancements made to gulp-codename.
 
+### gulp-codename v0.0.7
+
+**"Perseus Amber" (Malbrouck)**
+
+* Corrected README.md.
+* Included "gulpfriendly" within package.json.
+
 ### gulp-codename v0.0.6
 
 **"Perseus Amber" (Anoa)**
@@ -151,11 +158,13 @@ Changes, bug fixes and enhancements made to gulp-codename.
 * Codename unaltered if unavailable for current version.
 * Patch name cleared if unavailable for current version.
 
+
 ### gulp-codename v0.0.5
 
 **"Perseus Amber" (Uromastix)**
 
 * Updated log output.
+
 
 ### gulp-codename v0.0.4
 
@@ -164,6 +173,7 @@ Changes, bug fixes and enhancements made to gulp-codename.
 * Removed debug log.
 * Updated README.md detailing use alongside bump task.
 
+
 ### gulp-codename v0.0.3
 
 **"Perseus Amber" (Pangolin)**
@@ -171,17 +181,19 @@ Changes, bug fixes and enhancements made to gulp-codename.
 * Fixed problem with loading the codenames.json file.
 
 
-### gulp-codename v0.0.2 (Deprecated)
+### gulp-codename v0.0.2 (Deleted)
 
 **"Perseus Amber" (Ithomiid)**
 
 * Fixed README.md
 
-### gulp-codename v0.0.1 (Deprecated)
+
+### gulp-codename v0.0.1 (Deleted)
 
 **"Perseus Amber" (Saiga)**
 
 * Initial commit
+
 
 ## License
 See the [LICENSE][] distributed with the project.
