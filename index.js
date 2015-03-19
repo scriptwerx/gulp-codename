@@ -71,13 +71,27 @@ module.exports = function(options) {
       patchSplit = versionSplit[2].split('-');
 
       var newCodename = codenames.codeNames[versionSplit[0]][versionSplit[1]];
+
+      if (target.codename !== newCodename) {
+        gutil.log('Codename changed from ' + gutil.colors.magenta(target.codename) + ' to: ' + gutil.colors.cyan(newCodename));
+      }
+      else {
+        gutil.log('Codename is ' + gutil.colors.cyan(target.codename));
+      }
+
       target.codename = newCodename;
-      gutil.log('Codename ' + gutil.colors.magenta(target.codename) + ' to: ' + gutil.colors.cyan(newCodename));
 
       if (options.patchname) {
         var newPatchname = codenames.patchNames[patchSplit[0]];
+
+        if (target.patchname !== newPatchname) {
+          gutil.log('Patch name changed from ' + gutil.colors.magenta(target.patchname) + ' to: ' + gutil.colors.cyan(newPatchname));
+        }
+        else {
+          gutil.log('Patch name is ' + gutil.colors.cyan(target.patchname));
+        }
+
         target.patchname = newPatchname;
-        gutil.log('Patch name ' + gutil.colors.magenta(target.patchname) + ' to: ' + gutil.colors.cyan(newPatchname));
       }
 
       file.contents = new Buffer(JSON.stringify(target, null, indent.indent));
