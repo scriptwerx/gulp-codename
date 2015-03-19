@@ -24,6 +24,7 @@ module.exports = function(options) {
     options.codenames = path.resolve(__dirname + path.sep + 'codenames.json');
   }
 
+  // @TODO: Clean this up
   return through.obj(function(file, encoding, callback) {
 
     if (file.isNull()) {
@@ -72,26 +73,33 @@ module.exports = function(options) {
 
       var newCodename = codenames.codeNames[versionSplit[0]][versionSplit[1]];
 
-      if (target.codename !== newCodename) {
+      if (!newCodename) {
+        gutil.log(gutil.colors.magenta('Codename unavailable for current version: ' + target.version));
+      }
+      else if (target.codename !== newCodename) {
         gutil.log('Codename changed from ' + gutil.colors.magenta(target.codename) + ' to: ' + gutil.colors.cyan(newCodename));
       }
       else {
         gutil.log('Codename is ' + gutil.colors.cyan(target.codename));
       }
 
-      target.codename = newCodename;
+      target.codename = newCodename || target.codename;
 
       if (options.patchname) {
+
         var newPatchname = codenames.patchNames[patchSplit[0]];
 
-        if (target.patchname !== newPatchname) {
+        if (!newPatchname) {
+          gutil.log(gutil.colors.magenta('Patch name unavailable for current version: ' + target.version));
+        }
+        else if (target.patchname !== newPatchname) {
           gutil.log('Patch name changed from ' + gutil.colors.magenta(target.patchname) + ' to: ' + gutil.colors.cyan(newPatchname));
         }
         else {
           gutil.log('Patch name is ' + gutil.colors.cyan(target.patchname));
         }
 
-        target.patchname = newPatchname;
+        target.patchname = newPatchname || '';
       }
 
       file.contents = new Buffer(JSON.stringify(target, null, indent.indent));

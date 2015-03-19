@@ -143,6 +143,20 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 Changes, bug fixes and enhancements made to gulp-codename.
 
+### gulp-codename v0.0.6
+
+**"Perseus Amber" (Anoa)**
+
+* Ignores unsupported 2-digit version numbers (e.g. "v.0.10.0") - unless custom JSON is used and includes support for this.
+* Codename unaltered if unavailable for current version.
+* Patch name cleared if unavailable for current version.
+
+### gulp-codename v0.0.5
+
+**"Perseus Amber" (Uromastix)**
+
+* Updated log output.
+
 ### gulp-codename v0.0.4
 
 **"Perseus Amber" (Tayra)**
