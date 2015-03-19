@@ -110,6 +110,19 @@ gulp.task('codename', function() {
 });
 ```
 
+#### Use with gulp-bump
+
+You can add the codename task alongside your bump task as follows:
+
+```javascript
+gulp.task('bump', function() {
+  return gulp.src('./package.json')
+    .pipe(bump({ type: 'patch' }))
+    .pipe(codename())
+    .pipe(gulp.dest('./'))
+});
+```
+
 ## Contributing
 
 Any contribution to improve the project and/or expand it is welcome.
@@ -129,6 +142,13 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 ## Changelog
 
 Changes, bug fixes and enhancements made to gulp-codename.
+
+### gulp-codename v0.0.4
+
+**"Perseus Amber" (Tayra)**
+
+* Removed debug log.
+* Updated README.md detailing use alongside bump task.
 
 ### gulp-codename v0.0.3
 

@@ -1,6 +1,6 @@
 {
   "name": "gulp-codename",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A gulp plugin to include codename for your application based on SEMVER version.",
   "license": "MIT",
   "keywords": [
