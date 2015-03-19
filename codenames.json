@@ -1,138 +1,139 @@
 {
-	"codeNames": {
-		"0": {
-			"0": "Perseus Amber",
-			"1": "Bronze Marklar",
-			"2": "Scandium Aurora",
-			"3": "Dakar Snarfman",
-			"4": "Manila Quadra",
-			"5": "Aluminium Fafnir",
-			"6": "Nicosia Autobahn",
-			"7": "Bissau Cowpuncher",
-			"8": "Rabat Cyberpup",
-			"9": "Brazzaville Edison"
-		},
-		"1": {
-			"0": "Platinum Uninorth",
-			"1": "Tokyo Artemis",
-			"2": "Bishtek Sphere",
-			"3": "Honiara Nimitz",
-			"4": "Steel Faraday",
-			"5": "Manama Denali",
-			"6": "Pretoria Spin",
-			"7": "Cadmium Moroni",
-			"8": "Astana Tomcat",
-			"9": "Amman Epic"
-		},
-		"2": {
-			"0": "Mercury Shuffle",
-			"1": "Gaborone Sonata",
-			"2": "Jakarta Catalyst",
-			"3": "Lead Riyadh",
-			"4": "Vanadium Optima",
-			"5": "Cobalt Freeport",
-			"6": "Niamey Goldstar",
-			"7": "Tantalum Rainmaker",
-			"8": "Andorra Casper",
-			"9": "Polonium Esprit"
-		},
-		"3": {
-			"0": "Copper Oceanic",
-			"1": "Monrovia Starlight",
-			"2": "Lilongwe Photon",
-			"3": "Taipei Hyperbolic",
-			"4": "Iridium Betelgeuse",
-			"5": "Maputo Darwin",
-			"6": "Castries Apollo",
-			"7": "Vilnius Fidelity",
-			"8": "Lithium Pislo",
-			"9": "Bamako Slingshot"
-		},
-		"4": {
-			"0": "Nickel Molokini",
-			"1": "Nucalc Figaro",
-			"2": "Sofia Primus",
-			"3": "Astana Twister",
-			"4": "Kampala Sousa",
-			"5": "Tuvalu Powersurge",
-			"6": "Vientiane Chimera",
-			"7": "Zirconium Tempes",
-			"8": "Luanda Tailspin",
-			"9": "Djibouti Evolution"
-		},
-		"5": {
-			"0": "Titanium Inertia",
-			"1": "Praia Barleycorn",
-			"2": "Bangui Therblig",
-			"3": "Maseru Dash",
-			"4": "Kelvin Tunis",
-			"5": "Span Pottle",
-			"6": "Trident Mho",
-			"7": "McKendrick Dol",
-			"8": "Babylon Palm",
-			"9": "Coyote Plato"
-		},
-		"6": {
-			"0": "Xenon Whitehorse",
-			"1": "Whisper Brich",
-			"2": "Pegasus Latinum",
-			"3": "Cirrus Exige",
-			"4": "Goldeneye Acrylic",
-			"5": "Steelhead Smaragdine",
-			"6": "Spark Azuline",
-			"7": "Matrix Touchdown",
-			"8": "Cardinal Melanic",
-			"9": "Stinger Talisker"
-		},
-		"7": {
-			"0": "Merlin Heliotrope",
-			"1": "Haiku Elise",
-			"2": "Fusion Russet",
-			"3": "Marvel Glaucous",
-			"4": "Katmai Impala",
-			"5": "Wheaten Castaneous",
-			"6": "Kagera Zinnober",
-			"7": "Virid Wallflower",
-			"8": "Viper Flavescent",
-			"9": "Hailstorm Ren"
-		},
-		"8": {
-			"0": "Virescent Spitfire",
-			"1": "Luna Cesious",
-			"2": "Morpheus Argent",
-			"3": "Puniceous Acadia",
-			"4": "Gosling Cinnabar",
-			"5": "Cormorant Smalt",
-			"6": "Flammeous Pacific",
-			"7": "Omega Sapphire",
-			"8": "Zydeco Jessamy",
-			"9": "Sinopia Vulture"
-		},
-		"9": {
-			"0": "Talisman Airstream",
-			"1": "Dragonkid Malibu",
-			"2": "Dharma Slate",
-			"3": "Testaceous Amiga",
-			"4": "Perestroika Avatar",
-			"5": "Sheffield Ianthine",
-			"6": "Raven Wolfpack",
-			"7": "Niveous Speedracer",
-			"8": "Cayman Arpeggiator",
-			"9": "Purpureal Symphony"
-		},
-		"10": {
-			"0": "Tiberius Epic"
-		}
-	},
-	"patchNames": {
-		"1": "Saiga",
-		"2": "Ithomiid",
-		"3": "Pangolin",
-		"4": "Tayra",
-		"5": "Uromastix",
-		"6": "Anoa",
-		"7": "Malbrouck",
-		"8": "Balbul",
-		"9": "Zokor"
-	}
+  "codeNames": {
+    "0": {
+      "0": "Perseus Amber",
+      "1": "Bronze Marklar",
+      "2": "Scandium Aurora",
+      "3": "Dakar Snarfman",
+      "4": "Manila Quadra",
+      "5": "Aluminium Fafnir",
+      "6": "Nicosia Autobahn",
+      "7": "Bissau Cowpuncher",
+      "8": "Rabat Cyberpup",
+      "9": "Brazzaville Edison"
+    },
+    "1": {
+      "0": "Platinum Uninorth",
+      "1": "Tokyo Artemis",
+      "2": "Bishtek Sphere",
+      "3": "Honiara Nimitz",
+      "4": "Steel Faraday",
+      "5": "Manama Denali",
+      "6": "Pretoria Spin",
+      "7": "Cadmium Moroni",
+      "8": "Astana Tomcat",
+      "9": "Amman Epic"
+    },
+    "2": {
+      "0": "Mercury Shuffle",
+      "1": "Gaborone Sonata",
+      "2": "Jakarta Catalyst",
+      "3": "Lead Riyadh",
+      "4": "Vanadium Optima",
+      "5": "Cobalt Freeport",
+      "6": "Niamey Goldstar",
+      "7": "Tantalum Rainmaker",
+      "8": "Andorra Casper",
+      "9": "Polonium Esprit"
+    },
+    "3": {
+      "0": "Copper Oceanic",
+      "1": "Monrovia Starlight",
+      "2": "Lilongwe Photon",
+      "3": "Taipei Hyperbolic",
+      "4": "Iridium Betelgeuse",
+      "5": "Maputo Darwin",
+      "6": "Castries Apollo",
+      "7": "Vilnius Fidelity",
+      "8": "Lithium Pislo",
+      "9": "Bamako Slingshot"
+    },
+    "4": {
+      "0": "Nickel Molokini",
+      "1": "Nucalc Figaro",
+      "2": "Sofia Primus",
+      "3": "Astana Twister",
+      "4": "Kampala Sousa",
+      "5": "Tuvalu Powersurge",
+      "6": "Vientiane Chimera",
+      "7": "Zirconium Tempes",
+      "8": "Luanda Tailspin",
+      "9": "Djibouti Evolution"
+    },
+    "5": {
+      "0": "Titanium Inertia",
+      "1": "Praia Barleycorn",
+      "2": "Bangui Therblig",
+      "3": "Maseru Dash",
+      "4": "Kelvin Tunis",
+      "5": "Span Pottle",
+      "6": "Trident Mho",
+      "7": "McKendrick Dol",
+      "8": "Babylon Palm",
+      "9": "Coyote Plato"
+    },
+    "6": {
+      "0": "Xenon Whitehorse",
+      "1": "Whisper Brich",
+      "2": "Pegasus Latinum",
+      "3": "Cirrus Exige",
+      "4": "Goldeneye Acrylic",
+      "5": "Steelhead Smaragdine",
+      "6": "Spark Azuline",
+      "7": "Matrix Touchdown",
+      "8": "Cardinal Melanic",
+      "9": "Stinger Talisker"
+    },
+    "7": {
+      "0": "Merlin Heliotrope",
+      "1": "Haiku Elise",
+      "2": "Fusion Russet",
+      "3": "Marvel Glaucous",
+      "4": "Katmai Impala",
+      "5": "Wheaten Castaneous",
+      "6": "Kagera Zinnober",
+      "7": "Virid Wallflower",
+      "8": "Viper Flavescent",
+      "9": "Hailstorm Ren"
+    },
+    "8": {
+      "0": "Virescent Spitfire",
+      "1": "Luna Cesious",
+      "2": "Morpheus Argent",
+      "3": "Puniceous Acadia",
+      "4": "Gosling Cinnabar",
+      "5": "Cormorant Smalt",
+      "6": "Flammeous Pacific",
+      "7": "Omega Sapphire",
+      "8": "Zydeco Jessamy",
+      "9": "Sinopia Vulture"
+    },
+    "9": {
+      "0": "Talisman Airstream",
+      "1": "Dragonkid Malibu",
+      "2": "Dharma Slate",
+      "3": "Testaceous Amiga",
+      "4": "Perestroika Avatar",
+      "5": "Sheffield Ianthine",
+      "6": "Raven Wolfpack",
+      "7": "Niveous Speedracer",
+      "8": "Cayman Arpeggiator",
+      "9": "Purpureal Symphony"
+    },
+    "10": {
+      "0": "Tiberius Epic"
+    }
+  },
+  "patchNames": {
+    "0": "",
+    "1": "Saiga",
+    "2": "Ithomiid",
+    "3": "Pangolin",
+    "4": "Tayra",
+    "5": "Uromastix",
+    "6": "Anoa",
+    "7": "Malbrouck",
+    "8": "Balbul",
+    "9": "Zokor"
+  }
 }

@@ -1,76 +1,90 @@
-'use strict';
+/* jshint node: true */
 
-var gutil = require('gulp-util'),
+var fs = require('fs'),
+  gutil = require('gulp-util'),
+  _ = require('lodash'),
+  path = require('path'),
   through = require('through2'),
-  jeditor = require("gulp-json-editor");
+  detectIndent = require('detect-indent');
 
-module.exports = function () {
+var File = gutil.File,
+  PluginError = gutil.PluginError;
 
-  return through.obj(function (file, options, callback) {
+module.exports = function(options) {
 
-    var codenames,
-      patchnames;
+  options = _.extend({
+    codenames: void 0,
+    patchname: true
+  }, options);
+
+  if (options.codenames) {
+    options.codenames = process.cwd() + path.sep + options.codenames;
+  }
+  else {
+    options.codenames = 'codenames.json';
+  }
+
+  return through.obj(function(file, encoding, callback) {
 
     if (file.isNull()) {
-      this.push(file);
-      return callback();
+      return callback(null, file);
     }
-
     if (file.isStream()) {
-      this.emit('error', new gutil.PluginError('gulp-codename', 'Streaming not supported.')));
-      return callback();
+      return callback(new gutil.PluginError('gulp-codename', 'Streaming not supported'));
     }
 
-    // @TODO: Untested - load custom codenames
-    if (options && options.hasOwnProperty('codenames')) {
+    var json = file.contents.toString('utf8'),
+      indent = detectIndent(json),
+      target,
+      codenames,
+      versionSplit,
+      patchSplit;
+
+    try {
+      target = JSON.parse(json);
+    }
+    catch (e) {
+      return callback(new gutil.PluginError('gulp-codename', 'Problem parsing input JSON file', { fileName: file.path, showStack: true }));
+    }
+
+    if (!target.version) {
+      return callback(new gutil.PluginError('gulp-codename', 'No version.'));
+    }
+    else {
 
       try {
         codenames = JSON.parse(fs.readFileSync(options.codenames, 'utf8'));
       }
-      catch (err) {
-        this.emit('error', new gutil.PluginError('gulp-codename', 'Unable to load supplied codenames file.'));
-        return callback();
+      catch (e) {
+        return callback(new gutil.PluginError('gulp-codename', 'Problem parsing codenames JSON file', { fileName: options.codenames, showStack: true }));
       }
-    }
-    else {
-      var nameData = JSON.parse(fs.readFileSync('codenames.json', 'utf8'));
-      codenames = nameData.codeNames;
-      patchnames = nameData.patchNames;
-    }
 
-    function getVersionData (ver) {
-      var versionData = ver.split (".");
-      return versionData.concat (versionData.pop ().split ("-"));
-    }
+      if (!codenames.codeNames) {
+        return callback(new gutil.PluginError('gulp-codename', 'No codenames found.'));
+      }
 
-    function getCodeName (ver) {
-      var versionData = getVersionData (ver),
-        major = codenames.hasOwnProperty (versionData[0]) ? codenames[versionData[0]] : undefined;
-      return major !== undefined && major.hasOwnProperty (versionData[1]) ? major[versionData[1]] : "";
-    }
+      if (options.patchname && !codenames.patchNames) {
+        return callback(new gutil.PluginError('gulp-codename', 'No patch names found.'));
+      }
 
-    function getPatchName (ver) {
-      var versionData = getVersionData (ver);
-      return patchnames.hasOwnProperty (versionData[2]) ? patchnames[versionData[2]] : "";
-    }
+      versionSplit = target.version.split('.');
+      patchSplit = versionSplit[2].split('-');
 
-    try {
+      var newCodename = codenames.codeNames[versionSplit[0]][versionSplit[1]];
+      target.codename = newCodename;
+      gutil.log('Codename ' + gutil.colors.magenta(target.codename) + ' to: ' + gutil.colors.cyan(newCodename));
 
-      var pkg = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (options.patchname) {
+        var newPatchname = codenames.patchNames[patchSplit[0]];
+        target.patchname = newPatchname;
+        gutil.log('Patch name ' + gutil.colors.magenta(target.patchname) + ' to: ' + gutil.colors.cyan(newPatchname));
+      }
 
-      file = file.pipe(jeditor({
-        'codename': getCodeName (pkg.version),
-        'patchname': getPatchName (pkg.version)
-      }, {
-        'indent_char': '\t',
-        'indent_size': 1
-      }));
-    }
-    catch (err) {
-      this.emit('error', new gutil.PluginError('gulp-codename', err, { fileName: file.path }));
+      file.contents = new Buffer(JSON.stringify(target, null, indent.indent));
     }
 
-    this.push(file);
-    callback();
+    callback(null, file);
   });
+
 };
+/* jshint node: false */
