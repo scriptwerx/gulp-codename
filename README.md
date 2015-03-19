@@ -130,7 +130,7 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 Changes, bug fixes and enhancements made to gulp-codename.
 
-### gulp-codename v0.0.3 (Deprecated)
+### gulp-codename v0.0.3
 
 **"Perseus Amber" (Pangolin)**
 
