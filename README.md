@@ -1,6 +1,6 @@
 # [gulp-codename](id:mainTitle)
 
-[![Build Status](https://travis-ci.org/scriptwerx/gulp-codename.svg?branch=master)](https://travis-ci.org/scriptwerx/gulp-codename) [![GitHub version][badge-github-version-image] ][badge-npm-url] ![Progress](http://progressed.io/bar/50)
+[![Build Status](https://travis-ci.org/scriptwerx/gulp-codename.svg?branch=master)](https://travis-ci.org/scriptwerx/gulp-codename) [![GitHub version][badge-github-version-image] ][badge-npm-url] [![Dependencies](https://david-dm.org/scriptwerx/gulp-codename.svg)](https://david-dm.org/scriptwerx/gulp-codename) ![Progress](http://progressed.io/bar/90)
 
 [![NPM][badge-npm-image]][badge-npm-url]
 

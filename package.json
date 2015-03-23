@@ -1,6 +1,6 @@
 {
   "name": "gulp-codename",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A gulp plugin to include codename for your application based on SEMVER version.",
   "license": "MIT",
   "keywords": [
@@ -25,11 +25,11 @@
     "test": "mocha"
   },
   "dependencies": {
-    "detect-indent": "^2.0.0",
-    "gulp-util": "^2.2.14",
-    "lodash": "~2.4.1",
-    "path": "^0.4.9",
-    "through2": "~0.5.0"
+    "detect-indent": "^3.0.1",
+    "gulp-util": "^3.0.4",
+    "lodash": "~3.5.0",
+    "path": "^0.11.14",
+    "through2": "~0.6.3"
   },
   "devDependencies": {
     "gulp": "*",
